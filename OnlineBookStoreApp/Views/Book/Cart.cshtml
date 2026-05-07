@@ -1,0 +1,36 @@
+﻿@model List<OnlineBookStoreApp.Models.Book>
+
+<h2>Shopping Cart</h2>
+
+<a asp-action="Dashboard">
+    Back To Dashboard
+</a>
+
+<br />
+<br />
+
+@if (Model.Count == 0)
+{
+    <h3>No Books Added To Cart</h3>
+}
+else
+{
+    foreach (var item in Model)
+    {
+        <div>
+
+            <b>@item.Title</b>
+
+            <br />
+
+            Author: @item.Author
+
+            <br />
+
+            Price: ₹@item.Price
+
+            <hr />
+
+        </div>
+    }
+}

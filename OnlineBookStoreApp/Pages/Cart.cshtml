@@ -1,0 +1,19 @@
+﻿@page
+@model OnlineBookStoreApp.Pages.CartModel
+
+<h2>Shopping Cart</h2>
+
+<form method="post">
+
+    <input asp-for="BookName"
+           placeholder="Book Name" />
+
+    <br />
+
+    <button type="submit">
+        Add To Cart
+    </button>
+
+</form>
+
+<h3>@Model.CartMessage</h3>

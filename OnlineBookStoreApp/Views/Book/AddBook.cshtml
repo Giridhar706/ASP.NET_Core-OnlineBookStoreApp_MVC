@@ -1,0 +1,41 @@
+﻿@model OnlineBookStoreApp.Models.Book
+
+<h2>Add Book</h2>
+
+<form method="post">
+
+    <input asp-for="Title"
+           placeholder="Book Title" />
+
+    <span asp-validation-for="Title"></span>
+
+    <br />
+
+    <input asp-for="Author"
+           placeholder="Author Name" />
+
+    <span asp-validation-for="Author"></span>
+
+    <br />
+
+    <input asp-for="ISBN"
+           placeholder="13 Digit ISBN" />
+
+    <span asp-validation-for="ISBN"></span>
+
+    <br />
+
+    <input asp-for="Price"
+           placeholder="Price" />
+
+    <span asp-validation-for="Price"></span>
+
+    <br />
+
+    <button type="submit">
+        Save Book
+    </button>
+
+</form>
+
+<h3>@ViewBag.Message</h3>

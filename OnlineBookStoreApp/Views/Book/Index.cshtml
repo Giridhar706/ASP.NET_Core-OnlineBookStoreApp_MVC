@@ -1,0 +1,36 @@
+﻿@model List<OnlineBookStoreApp.Models.Book>
+
+<h2>Book List</h2>
+
+<a asp-action="Dashboard">
+    Back To Dashboard
+</a>
+
+<br />
+<br />
+
+@foreach (var item in Model)
+{
+    <div>
+
+        <b>@item.Title</b>
+
+        <br />
+
+        Author: @item.Author
+
+        <br />
+
+        Price: ₹@item.Price
+
+        <br />
+
+        <a asp-action="Details"
+               asp-route-id="@item.Id">
+            View Details
+        </a>
+
+        <hr />
+
+    </div>
+}

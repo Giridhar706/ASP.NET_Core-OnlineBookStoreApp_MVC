@@ -1,0 +1,27 @@
+﻿@model OnlineBookStoreApp.Models.Book
+
+<h2>Book Details</h2>
+
+<b>Title:</b> @Model.Title
+
+<br />
+
+<b>Author:</b> @Model.Author
+
+<br />
+
+<b>ISBN:</b> @Model.ISBN
+
+<br />
+
+<b>Price:</b> ₹@Model.Price
+
+<br />
+<br />
+
+<a asp-action="AddToCart"
+       asp-route-id="@Model.Id">
+
+    Add To Cart
+
+</a>
